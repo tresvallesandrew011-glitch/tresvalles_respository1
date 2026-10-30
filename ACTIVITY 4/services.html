@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#100b18">
+    <title>Midnight Hollow | Services</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            min-height: 100vh;
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+            background:
+                radial-gradient(ellipse at 12% 15%, rgb(112 48 145 / 20%), transparent 32%),
+                radial-gradient(ellipse at 90% 65%, rgb(255 111 0 / 14%), transparent 30%),
+                #100b18;
+            color: #fffaf3;
+            font-family: Arial, sans-serif;
+        }
+
+        .site-header {
+            border-bottom: 1px solid rgb(240 213 181 / 16%);
+            background: rgb(16 11 24 / 94%);
+        }
+
+        .navbar {
+            width: min(1100px, calc(100% - 40px));
+            min-height: 72px;
+            margin: 0 auto;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 24px;
+        }
+
+        .brand {
+            color: #ff9b43;
+            font-size: 20px;
+            font-weight: 800;
+            text-decoration: none;
+            white-space: nowrap;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 8px;
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+
+        .nav-links a {
+            display: block;
+            padding: 10px 14px;
+            border-radius: 7px;
+            color: #eee4f1;
+            font-size: 15px;
+            font-weight: 700;
+            text-decoration: none;
+        }
+
+        .nav-links a:hover,
+        .nav-links a:focus-visible {
+            background: rgb(139 74 165 / 22%);
+            color: #ffad64;
+            outline: none;
+        }
+
+        main {
+            flex: 1;
+            width: min(1100px, calc(100% - 40px));
+            margin: 0 auto;
+            display: grid;
+            place-items: center;
+            padding: 40px 0;
+            text-align: center;
+        }
+
+        .service-content {
+            width: min(100%, 660px);
+            padding: 24px;
+        }
+
+        .eyebrow {
+            margin: 0 0 12px;
+            color: #ff9b43;
+            font-size: 13px;
+            font-weight: 800;
+            letter-spacing: 0.16em;
+            text-transform: uppercase;
+        }
+
+        h1 {
+            margin: 0;
+            color: #fffaf3;
+            font-size: clamp(34px, 7vw, 56px);
+        }
+
+        .intro {
+            max-width: 520px;
+            margin: 14px auto 20px;
+            color: #c9bacf;
+            line-height: 1.7;
+        }
+
+        .butler-art {
+            display: block;
+            width: min(100%, 390px);
+            height: auto;
+            margin: 0 auto;
+            filter: drop-shadow(0 14px 24px rgb(0 0 0 / 40%));
+        }
+
+        .back-link {
+            display: inline-block;
+            margin-top: 12px;
+            padding: 12px 18px;
+            border-radius: 7px;
+            background: #e96818;
+            color: #fff;
+            font-weight: 700;
+            text-decoration: none;
+        }
+
+        .back-link:hover {
+            background: #c94e0d;
+        }
+
+        .back-link:focus-visible {
+            outline: 3px solid #ffad64;
+            outline-offset: 3px;
+        }
+
+        footer {
+            padding: 22px 20px;
+            border-top: 1px solid rgb(240 213 181 / 15%);
+            color: #a99aad;
+            text-align: center;
+            font-size: 14px;
+        }
+
+        @media (max-width: 520px) {
+            .navbar {
+                width: calc(100% - 24px);
+                min-height: 64px;
+                gap: 6px;
+            }
+
+            .brand {
+                font-size: 16px;
+            }
+
+            .nav-links {
+                gap: 0;
+            }
+
+            .nav-links a {
+                padding: 9px 7px;
+                font-size: 13px;
+            }
+
+            main {
+                width: calc(100% - 24px);
+            }
+
+            .service-content {
+                padding: 20px 4px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header class="site-header">
+        <nav class="navbar" aria-label="Main navigation">
+            <a class="brand" href="home.html">🎃 Midnight Hollow</a>
+            <ul class="nav-links">
+                <li><a href="home.html">Home</a></li>
+                <li><a href="services.html" aria-current="page">Services</a></li>
+                <li><a href="blogs.html">Blogs</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="service-content" aria-labelledby="page-title">
+            <p class="eyebrow">At your service</p>
+            <h1 id="page-title">A Most Spooktacular Welcome</h1>
+            <p class="intro">Our faithful pumpkin-headed butler is ready to welcome you to Midnight Hollow.</p>
+            <svg class="butler-art" viewBox="0 0 400 440" role="img" aria-labelledby="butler-title butler-description" xmlns="http://www.w3.org/2000/svg">
+                <title id="butler-title">Pumpkin-headed butler bowing</title>
+                <desc id="butler-description">A pumpkin-headed butler in a black tailcoat, white shirt, bow tie, and gloves bends forward in a courteous bow.</desc>
+                <ellipse cx="200" cy="407" rx="118" ry="15" fill="#050308" opacity=".55"/>
+                <path d="M176 91c-8-11-8-21 2-31m8 31c-5-14-2-26 9-36" fill="none" stroke="#789047" stroke-linecap="round" stroke-width="9"/>
+                <path d="M164 54c6-9 27-13 39-7 7 3 11 9 13 16" fill="none" stroke="#526a35" stroke-linecap="round" stroke-width="7"/>
+                <path d="M139 78c14-25 50-38 77-24 25 13 35 42 28 68-8 31-38 51-70 43-30-7-49-31-46-59 1-10 5-20 11-28z" fill="#ee751e" stroke="#a84317" stroke-width="7"/>
+                <path d="M194 52c-13 21-14 65 1 108m-29-98c-12 21-12 59 1 83m52-83c12 22 12 58-1 82" fill="none" stroke="#ffad54" stroke-linecap="round" stroke-width="5"/>
+                <path d="m155 113 17-8 12 11 15-12 18 8-8 13-16 1-12 13-15-10-15-2z" fill="#29162f"/>
+                <path d="m162 131 16-5 12 7 12-8 15 5-9 16-18 7-18-8z" fill="#351b48"/>
+                <path d="m190 166-7 24 33 0-8-25" fill="#fffaf3" stroke="#d9cbdc" stroke-width="4"/>
+                <path d="M181 184 126 196l-23 67 42 42 63-26 30-61-24-34z" fill="#21172a" stroke="#120d18" stroke-linejoin="round" stroke-width="8"/>
+                <path d="m186 190 18 14 19-15 20 25-30 22-38-16z" fill="#fffaf3" stroke="#d9cbdc" stroke-width="4"/>
+                <path d="m203 197 13 8-13 10-12-9z" fill="#e96818" stroke="#9f4316" stroke-width="3"/>
+                <path d="m143 296 69-27 26 31-24 74-37 7-49-23z" fill="#292031" stroke="#120d18" stroke-linejoin="round" stroke-width="8"/>
+                <path d="m151 297 30 9-12 64-39-15zM215 272l24 27-23 69-28 2 17-68z" fill="#17131b" stroke="#0c090f" stroke-linejoin="round" stroke-width="7"/>
+                <path d="m133 352 38 13-7 20-57-6c-8-1-11-8-6-14l14-14zM204 358l26 8 10 17-51 5c-10 1-14-7-8-14l12-12z" fill="#110d14" stroke="#09070b" stroke-linejoin="round" stroke-width="6"/>
+                <path d="m128 205-27 31-36 49c-8 11-4 26 8 31 10 4 19-3 24-12l36-48 20-33z" fill="#21172a" stroke="#120d18" stroke-linejoin="round" stroke-width="8"/>
+                <path d="m74 308-13 12c-5 5-4 12 2 15 5 3 10 0 14-4l11-12z" fill="#fffaf3" stroke="#d9cbdc" stroke-width="4"/>
+                <path d="m232 221 28 14 31 29c9 9 8 23-2 29-8 5-17 0-24-7l-36-31-18-13z" fill="#21172a" stroke="#120d18" stroke-linejoin="round" stroke-width="8"/>
+                <path d="m286 287 13 10c6 4 7 11 2 15-5 4-10 2-15-1l-12-10z" fill="#fffaf3" stroke="#d9cbdc" stroke-width="4"/>
+                <path d="m111 237 38 21m69-26 35 19" stroke="#e96818" stroke-linecap="round" stroke-width="5"/>
+                <path d="M180 235h17m-23 15h17" stroke="#ffad64" stroke-linecap="round" stroke-width="4"/>
+            </svg>
+            <a class="back-link" href="landing page.html">Back to the Landing Page</a>
+        </section>
+    </main>
+
+    <footer>Made for magical October nights. 🎃</footer>
+</body>
+</html>

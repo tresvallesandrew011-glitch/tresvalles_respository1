@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#100b18">
+    <title>Midnight Hollow | Home</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            min-height: 100vh;
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+            background:
+                radial-gradient(ellipse at 12% 15%, rgb(112 48 145 / 20%), transparent 32%),
+                radial-gradient(ellipse at 90% 65%, rgb(255 111 0 / 14%), transparent 30%),
+                #100b18;
+            color: #fffaf3;
+            font-family: Arial, sans-serif;
+        }
+
+        .site-header {
+            border-bottom: 1px solid rgb(240 213 181 / 16%);
+            background: rgb(16 11 24 / 94%);
+        }
+
+        .navbar {
+            width: min(1100px, calc(100% - 40px));
+            min-height: 72px;
+            margin: 0 auto;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 24px;
+        }
+
+        .brand {
+            color: #ff9b43;
+            font-size: 20px;
+            font-weight: 800;
+            text-decoration: none;
+            white-space: nowrap;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 8px;
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+
+        .nav-links a {
+            display: block;
+            padding: 10px 14px;
+            border-radius: 7px;
+            color: #eee4f1;
+            font-size: 15px;
+            font-weight: 700;
+            text-decoration: none;
+        }
+
+        .nav-links a:hover,
+        .nav-links a:focus-visible {
+            background: rgb(139 74 165 / 22%);
+            color: #ffad64;
+            outline: none;
+        }
+
+        main {
+            flex: 1;
+            width: min(1100px, calc(100% - 40px));
+            margin: 0 auto;
+            display: grid;
+            place-items: center;
+            padding: 48px 0;
+            text-align: center;
+        }
+
+        .home-content {
+            width: min(100%, 620px);
+            padding: 32px;
+        }
+
+        .eyebrow {
+            margin: 0 0 12px;
+            color: #ff9b43;
+            font-size: 13px;
+            font-weight: 800;
+            letter-spacing: 0.16em;
+            text-transform: uppercase;
+        }
+
+        h1 {
+            margin: 0;
+            color: #fffaf3;
+            font-size: clamp(34px, 7vw, 56px);
+        }
+
+        .intro {
+            margin: 14px auto 26px;
+            color: #c9bacf;
+            line-height: 1.7;
+        }
+
+        .house-art {
+            display: block;
+            width: min(100%, 440px);
+            height: auto;
+            margin: 0 auto;
+            filter: drop-shadow(0 14px 24px rgb(0 0 0 / 40%));
+        }
+
+        .back-link {
+            display: inline-block;
+            margin-top: 24px;
+            padding: 12px 18px;
+            border-radius: 7px;
+            background: #e96818;
+            color: #fff;
+            font-weight: 700;
+            text-decoration: none;
+        }
+
+        .back-link:hover {
+            background: #c94e0d;
+        }
+
+        .back-link:focus-visible {
+            outline: 3px solid #ffad64;
+            outline-offset: 3px;
+        }
+
+        footer {
+            padding: 22px 20px;
+            border-top: 1px solid rgb(240 213 181 / 15%);
+            color: #a99aad;
+            text-align: center;
+            font-size: 14px;
+        }
+
+        @media (max-width: 520px) {
+            .navbar {
+                width: calc(100% - 24px);
+                min-height: 64px;
+                gap: 6px;
+            }
+
+            .brand {
+                font-size: 16px;
+            }
+
+            .nav-links {
+                gap: 0;
+            }
+
+            .nav-links a {
+                padding: 9px 7px;
+                font-size: 13px;
+            }
+
+            main {
+                width: calc(100% - 24px);
+            }
+
+            .home-content {
+                padding: 20px 4px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header class="site-header">
+        <nav class="navbar" aria-label="Main navigation">
+            <a class="brand" href="home.html">🎃 Midnight Hollow</a>
+            <ul class="nav-links">
+                <li><a href="home.html" aria-current="page">Home</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="blogs.html">Blogs</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="home-content" aria-labelledby="page-title">
+            <p class="eyebrow">A warm light in the dark</p>
+            <h1 id="page-title">Welcome Home</h1>
+            <p class="intro">Come inside and stay awhile at our little haunted house.</p>
+            <svg class="house-art" viewBox="0 0 440 330" role="img" aria-labelledby="house-title house-description" xmlns="http://www.w3.org/2000/svg">
+                <title id="house-title">A spooky Halloween house</title>
+                <desc id="house-description">A crooked purple house with glowing orange windows, a full moon, bats, and pumpkins.</desc>
+                <circle cx="343" cy="70" r="42" fill="#f9c779"/>
+                <path d="M48 91c8-12 17-12 25 0m-4-8 4 8 4-8m33 30c8-12 17-12 25 0m-4-8 4 8 4-8" fill="none" stroke="#21152c" stroke-linecap="round" stroke-linejoin="round" stroke-width="5"/>
+                <path d="m74 174 145-103 153 103-13 17-25-18v112H105V174l-21 17z" fill="#4b2a61" stroke="#24142f" stroke-linejoin="round" stroke-width="8"/>
+                <path d="m199 86 20-41 24 53" fill="#351b48" stroke="#24142f" stroke-linejoin="round" stroke-width="8"/>
+                <path d="m91 164 128-91 137 92" fill="none" stroke="#8b4aa5" stroke-linecap="round" stroke-width="13"/>
+                <path d="M130 176h48v49h-48zM264 176h48v49h-48z" fill="#ff9b43" stroke="#24142f" stroke-width="7"/>
+                <path d="M154 176v49m-24-25h48m110-24v49m-24-25h48" stroke="#351b48" stroke-width="6"/>
+                <path d="M190 285v-72c0-22 15-36 31-36s31 14 31 36v72z" fill="#24142f" stroke="#160f1d" stroke-width="7"/>
+                <circle cx="238" cy="250" r="4" fill="#ff9b43"/>
+                <path d="M78 285h284" stroke="#6c4c5b" stroke-linecap="round" stroke-width="7"/>
+                <g transform="translate(82 260)">
+                    <path d="M26 0c-5 8-5 14 0 18" fill="none" stroke="#6b8e3d" stroke-linecap="round" stroke-width="5"/>
+                    <path d="M4 19c-12 8-9 26 1 32 10 7 31 7 42 0 10-7 13-24 1-32-10-8-34-8-44 0z" fill="#e96818" stroke="#a83e12" stroke-width="4"/>
+                    <path d="M26 17c-7 9-7 25 0 35m-13-34c-6 9-5 24 1 32m25-32c6 9 5 24-1 32" fill="none" stroke="#ffad64" stroke-linecap="round" stroke-width="3"/>
+                    <path d="m17 34 5-4 4 5 5-5 5 4-3 8H20z" fill="#351b48"/>
+                </g>
+                <g transform="translate(324 268) scale(.78)">
+                    <path d="M26 0c-5 8-5 14 0 18" fill="none" stroke="#6b8e3d" stroke-linecap="round" stroke-width="5"/>
+                    <path d="M4 19c-12 8-9 26 1 32 10 7 31 7 42 0 10-7 13-24 1-32-10-8-34-8-44 0z" fill="#e96818" stroke="#a83e12" stroke-width="4"/>
+                    <path d="M26 17c-7 9-7 25 0 35m-13-34c-6 9-5 24 1 32m25-32c6 9 5 24-1 32" fill="none" stroke="#ffad64" stroke-linecap="round" stroke-width="3"/>
+                    <path d="m17 34 5-4 4 5 5-5 5 4-3 8H20z" fill="#351b48"/>
+                </g>
+            </svg>
+            <a class="back-link" href="landing page.html">Explore the Hollow</a>
+        </section>
+    </main>
+
+    <footer>Made for magical October nights. 🎃</footer>
+</body>
+</html>

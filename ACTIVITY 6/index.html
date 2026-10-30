@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#10151e">
+    <title>Cube Lab | Sign In</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            min-height: 100vh;
+            margin: 0;
+            display: grid;
+            place-items: center;
+            padding: 24px;
+            background:
+                radial-gradient(ellipse at 15% 20%, rgb(24 217 219 / 18%), transparent 32%),
+                radial-gradient(ellipse at 85% 80%, rgb(255 207 51 / 12%), transparent 30%),
+                #10151e;
+            color: #17202d;
+            font-family: Arial, sans-serif;
+        }
+
+        .login-card {
+            width: min(100%, 400px);
+            padding: 36px;
+            border: 1px solid #dce3ec;
+            border-top: 5px solid #18bfc6;
+            border-radius: 14px;
+            background: #fff;
+            box-shadow: 0 18px 55px rgb(0 0 0 / 45%), 0 0 30px rgb(24 217 219 / 12%);
+        }
+
+        .cube-mark {
+            margin: 0 0 12px;
+            text-align: center;
+            font-size: 38px;
+        }
+
+        h1 {
+            margin: 0 0 8px;
+            text-align: center;
+            font-size: 28px;
+            color: #172b48;
+        }
+
+        .intro {
+            margin: 0 0 28px;
+            color: #586779;
+            text-align: center;
+        }
+
+        .field {
+            margin-bottom: 18px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 7px;
+            font-size: 14px;
+            font-weight: 700;
+        }
+
+        input {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #cbd5e1;
+            border-radius: 7px;
+            background: #fff;
+            color: #17202d;
+            font: inherit;
+        }
+
+        input:focus {
+            border-color: #159ca3;
+            outline: 3px solid rgb(24 191 198 / 20%);
+        }
+
+        button {
+            width: 100%;
+            padding: 13px;
+            border: 0;
+            border-radius: 7px;
+            background: #159ca3;
+            color: #fff;
+            font: inherit;
+            font-weight: 700;
+            cursor: pointer;
+            transition: background-color 150ms ease, transform 150ms ease;
+        }
+
+        button:hover {
+            background: #117b83;
+            transform: translateY(-1px);
+        }
+
+        button:focus-visible {
+            outline: 3px solid #ffcf33;
+            outline-offset: 3px;
+        }
+
+        #form-message {
+            min-height: 20px;
+            margin: 14px 0 0;
+            color: #17666c;
+            text-align: center;
+            font-size: 14px;
+        }
+    </style>
+</head>
+<body>
+    <main class="login-card">
+        <p class="cube-mark" aria-hidden="true">🧩</p>
+        <h1>Welcome to Cube Lab</h1>
+        <p class="intro">Sign in to continue your Rubik's Cube journey.</p>
+        <form id="login-form">
+            <div class="field">
+                <label for="username">Username</label>
+                <input id="username" name="username" type="text" autocomplete="username" required>
+            </div>
+            <div class="field">
+                <label for="email">E-mail</label>
+                <input id="email" name="email" type="email" autocomplete="email" required>
+            </div>
+            <div class="field">
+                <label for="password">Password</label>
+                <input id="password" name="password" type="password" autocomplete="current-password" required>
+            </div>
+            <button type="submit">Sign In</button>
+            <p id="form-message" role="status" aria-live="polite"></p>
+        </form>
+    </main>
+    <script>
+        document.getElementById("login-form").addEventListener("submit", function (event) {
+            event.preventDefault();
+            window.location.href = "landing page.html";
+        });
+    </script>
+</body>
+</html>

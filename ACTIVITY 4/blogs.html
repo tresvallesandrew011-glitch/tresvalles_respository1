@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#100b18">
+    <title>Midnight Hollow | Blogs</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            min-height: 100vh;
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+            background:
+                radial-gradient(ellipse at 12% 15%, rgb(112 48 145 / 20%), transparent 32%),
+                radial-gradient(ellipse at 90% 65%, rgb(255 111 0 / 14%), transparent 30%),
+                #100b18;
+            color: #fffaf3;
+            font-family: Arial, sans-serif;
+        }
+
+        .site-header {
+            border-bottom: 1px solid rgb(240 213 181 / 16%);
+            background: rgb(16 11 24 / 94%);
+        }
+
+        .navbar {
+            width: min(1100px, calc(100% - 40px));
+            min-height: 72px;
+            margin: 0 auto;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 24px;
+        }
+
+        .brand {
+            color: #ff9b43;
+            font-size: 20px;
+            font-weight: 800;
+            text-decoration: none;
+            white-space: nowrap;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 8px;
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+
+        .nav-links a {
+            display: block;
+            padding: 10px 14px;
+            border-radius: 7px;
+            color: #eee4f1;
+            font-size: 15px;
+            font-weight: 700;
+            text-decoration: none;
+        }
+
+        .nav-links a:hover,
+        .nav-links a:focus-visible {
+            background: rgb(139 74 165 / 22%);
+            color: #ffad64;
+            outline: none;
+        }
+
+        main {
+            flex: 1;
+            width: min(1100px, calc(100% - 40px));
+            margin: 0 auto;
+            display: grid;
+            place-items: center;
+            padding: 40px 0;
+            text-align: center;
+        }
+
+        .blog-content {
+            width: min(100%, 660px);
+            padding: 24px;
+        }
+
+        .eyebrow {
+            margin: 0 0 12px;
+            color: #ff9b43;
+            font-size: 13px;
+            font-weight: 800;
+            letter-spacing: 0.16em;
+            text-transform: uppercase;
+        }
+
+        h1 {
+            margin: 0;
+            color: #fffaf3;
+            font-size: clamp(34px, 7vw, 56px);
+        }
+
+        .intro {
+            max-width: 520px;
+            margin: 14px auto 20px;
+            color: #c9bacf;
+            line-height: 1.7;
+        }
+
+        .book-art {
+            display: block;
+            width: min(100%, 390px);
+            height: auto;
+            margin: 0 auto;
+            filter: drop-shadow(0 14px 24px rgb(0 0 0 / 40%));
+        }
+
+        .back-link {
+            display: inline-block;
+            margin-top: 12px;
+            padding: 12px 18px;
+            border-radius: 7px;
+            background: #e96818;
+            color: #fff;
+            font-weight: 700;
+            text-decoration: none;
+        }
+
+        .back-link:hover {
+            background: #c94e0d;
+        }
+
+        .back-link:focus-visible {
+            outline: 3px solid #ffad64;
+            outline-offset: 3px;
+        }
+
+        footer {
+            padding: 22px 20px;
+            border-top: 1px solid rgb(240 213 181 / 15%);
+            color: #a99aad;
+            text-align: center;
+            font-size: 14px;
+        }
+
+        @media (max-width: 520px) {
+            .navbar {
+                width: calc(100% - 24px);
+                min-height: 64px;
+                gap: 6px;
+            }
+
+            .brand {
+                font-size: 16px;
+            }
+
+            .nav-links {
+                gap: 0;
+            }
+
+            .nav-links a {
+                padding: 9px 7px;
+                font-size: 13px;
+            }
+
+            main {
+                width: calc(100% - 24px);
+            }
+
+            .blog-content {
+                padding: 20px 4px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header class="site-header">
+        <nav class="navbar" aria-label="Main navigation">
+            <a class="brand" href="home.html">🎃 Midnight Hollow</a>
+            <ul class="nav-links">
+                <li><a href="home.html">Home</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="blogs.html" aria-current="page">Blogs</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="blog-content" aria-labelledby="page-title">
+            <p class="eyebrow">Tales from the Hollow</p>
+            <h1 id="page-title">The Midnight Journal</h1>
+            <p class="intro">Every creaking floorboard has a story. Open the journal, take up your pen, and let the Halloween tales begin.</p>
+            <svg class="book-art" viewBox="0 0 420 340" role="img" aria-labelledby="book-title book-description" xmlns="http://www.w3.org/2000/svg">
+                <title id="book-title">A spooky book and pen</title>
+                <desc id="book-description">An open, deep-purple journal with orange-edged pages and a golden feather pen resting beside it.</desc>
+                <ellipse cx="208" cy="294" rx="154" ry="18" fill="#050308" opacity=".55"/>
+                <path d="M65 110c47-24 97-16 143 7v150c-47-25-96-32-143-8-9 5-19-1-19-11V128c0-8 8-15 19-18z" fill="#4b2a61" stroke="#21152c" stroke-linejoin="round" stroke-width="8"/>
+                <path d="M355 110c-47-24-97-16-143 7v150c47-25 96-32 143-8 9 5 19-1 19-11V128c0-8-8-15-19-18z" fill="#5a3472" stroke="#21152c" stroke-linejoin="round" stroke-width="8"/>
+                <path d="M68 126c43-19 87-11 126 8v116c-41-20-83-25-126-7-5 2-9-1-9-6V137c0-5 3-9 9-11zm284 0c-43-19-87-11-126 8v116c41-20 83-25 126-7 5 2 9-1 9-6V137c0-5-3-9-9-11z" fill="#fff1d8" stroke="#e96818" stroke-width="5"/>
+                <path d="M210 117v149" stroke="#e96818" stroke-linecap="round" stroke-width="8"/>
+                <path d="M83 150c27-9 54-8 81 0m-81 21c27-9 54-8 81 0m-81 21c27-9 54-8 81 0m88-42c27-8 54-9 81 0m-81 21c27-8 54-9 81 0m-81 21c27-8 54-9 81 0" fill="none" stroke="#b8a2ac" stroke-linecap="round" stroke-width="4"/>
+                <path d="m275 252 87-165c5-10 18-6 14 5l-69 174-26 21z" fill="#ffad43" stroke="#f47721" stroke-linejoin="round" stroke-width="5"/>
+                <path d="m281 273 26-7-14-20z" fill="#f5ddae" stroke="#f47721" stroke-linejoin="round" stroke-width="4"/>
+                <path d="M361 89c-4-12 3-21 14-20" fill="none" stroke="#fff0c9" stroke-linecap="round" stroke-width="5"/>
+                <path d="M338 113c-2-19 10-40 33-49-3 25-14 42-33 49z" fill="#8b4aa5" stroke="#d39be0" stroke-width="4"/>
+                <path d="m286 255 19 10m-11-28 18 10m-7-28 18 10m-7-28 18 10" stroke="#ffe0a0" stroke-linecap="round" stroke-width="3"/>
+                <path d="m113 111 10-20 10 20 21 3-15 14 4 21-20-11-19 11 4-21-16-14z" fill="#ffad43"/>
+            </svg>
+            <a class="back-link" href="landing page.html">Back to the Landing Page</a>
+        </section>
+    </main>
+
+    <footer>Made for magical October nights. 🎃</footer>
+</body>
+</html>

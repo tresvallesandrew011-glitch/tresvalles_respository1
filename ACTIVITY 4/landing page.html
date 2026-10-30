@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#100b18">
+    <title>Midnight Hollow | Halloween Home</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            min-height: 100vh;
+            margin: 0;
+            background:
+                radial-gradient(ellipse at 12% 15%, rgb(112 48 145 / 20%), transparent 32%),
+                radial-gradient(ellipse at 90% 55%, rgb(255 111 0 / 12%), transparent 30%),
+                #100b18;
+            color: #fffaf3;
+            font-family: Arial, sans-serif;
+        }
+
+        a {
+            color: inherit;
+        }
+
+        .site-header {
+            position: sticky;
+            top: 0;
+            z-index: 1;
+            border-bottom: 1px solid rgb(240 213 181 / 16%);
+            background: rgb(16 11 24 / 94%);
+            backdrop-filter: blur(12px);
+        }
+
+        .navbar {
+            width: min(1100px, 100% - 40px);
+            min-height: 72px;
+            margin: 0 auto;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 24px;
+        }
+
+        .brand {
+            color: #ff9b43;
+            font-size: 20px;
+            font-weight: 800;
+            text-decoration: none;
+            white-space: nowrap;
+        }
+
+        .nav-links {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+
+        .nav-links a {
+            display: block;
+            padding: 10px 14px;
+            border-radius: 7px;
+            color: #eee4f1;
+            font-size: 15px;
+            font-weight: 700;
+            text-decoration: none;
+            transition: color 150ms ease, background-color 150ms ease;
+        }
+
+        .nav-links a:hover,
+        .nav-links a:focus-visible {
+            background: rgb(139 74 165 / 22%);
+            color: #ffad64;
+            outline: none;
+        }
+
+        main {
+            width: min(1100px, 100% - 40px);
+            margin: 0 auto;
+        }
+
+        .hero {
+            min-height: 490px;
+            display: grid;
+            align-content: center;
+            justify-items: start;
+            padding: 80px 0;
+            color: #fffaf3;
+        }
+
+        .eyebrow {
+            margin: 0 0 16px;
+            color: #ff9b43;
+            font-size: 13px;
+            font-weight: 800;
+            letter-spacing: 0.16em;
+            text-transform: uppercase;
+        }
+
+        h1 {
+            max-width: 700px;
+            margin: 0;
+            color: #fffaf3;
+            font-size: clamp(42px, 8vw, 76px);
+            line-height: 1.05;
+        }
+
+        .hero-copy {
+            max-width: 570px;
+            margin: 20px 0 28px;
+            color: #c9bacf;
+            font-size: 18px;
+            line-height: 1.7;
+        }
+
+        .primary-link {
+            display: inline-block;
+            padding: 13px 20px;
+            border-radius: 7px;
+            background: #e96818;
+            color: white;
+            font-weight: 700;
+            text-decoration: none;
+            transition: background-color 150ms ease, transform 150ms ease;
+        }
+
+        .primary-link:hover {
+            transform: translateY(-1px);
+            background: #c94e0d;
+        }
+
+        .primary-link:focus-visible {
+            outline: 3px solid #ffad64;
+            outline-offset: 3px;
+        }
+
+        @media (max-width: 640px) {
+            .navbar {
+                width: calc(100% - 28px);
+                min-height: 64px;
+                gap: 8px;
+            }
+
+            .brand {
+                font-size: 17px;
+            }
+
+            .nav-links {
+                gap: 0;
+            }
+
+            .nav-links a {
+                padding: 9px 8px;
+                font-size: 14px;
+            }
+
+            main {
+                width: calc(100% - 36px);
+            }
+
+            .hero {
+                min-height: 420px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header class="site-header">
+        <nav class="navbar" aria-label="Main navigation">
+            <a class="brand" href="home.html">🎃 Midnight Hollow</a>
+            <ul class="nav-links">
+                <li><a href="home.html">Home</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="blogs.html">Blogs</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero" id="home">
+            <p class="eyebrow">Welcome to the spooky season</p>
+            <h1>A little magic after dark.</h1>
+            <p class="hero-copy">Step into Midnight Hollow, where autumn nights glow, ghost stories gather, and every visit brings a new surprise.</p>
+            <a class="primary-link" href="services.html">Explore the Hollow</a>
+        </section>
+    </main>
+</body>
+</html>

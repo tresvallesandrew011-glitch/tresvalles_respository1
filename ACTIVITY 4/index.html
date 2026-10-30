@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#100b18">
+    <title>Halloween Login</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            min-height: 100vh;
+            margin: 0;
+            display: grid;
+            place-items: center;
+            padding: 24px;
+            background:
+                radial-gradient(ellipse at 15% 20%, rgb(112 48 145 / 22%), transparent 32%),
+                radial-gradient(ellipse at 85% 80%, rgb(255 111 0 / 16%), transparent 30%),
+                #100b18;
+            color: #21172a;
+            font-family: Arial, sans-serif;
+        }
+
+        .login-card {
+            width: min(100%, 400px);
+            padding: 36px;
+            border: 1px solid #f0d5b5;
+            border-top: 5px solid #f47721;
+            border-radius: 14px;
+            background: #fffaf3;
+            box-shadow: 0 18px 55px rgb(0 0 0 / 45%), 0 0 30px rgb(244 119 33 / 12%);
+        }
+
+        .pumpkin {
+            margin: 0 0 12px;
+            text-align: center;
+            font-size: 38px;
+        }
+
+        h1 {
+            margin: 0 0 8px;
+            text-align: center;
+            font-size: 28px;
+            color: #351b48;
+        }
+
+        .intro {
+            margin: 0 0 28px;
+            color: #6e6076;
+            text-align: center;
+        }
+
+        .field {
+            margin-bottom: 18px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 7px;
+            font-size: 14px;
+            font-weight: 700;
+        }
+
+        input {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #d9cbdc;
+            border-radius: 7px;
+            background: #fff;
+            color: #21172a;
+            font: inherit;
+        }
+
+        input:focus {
+            border-color: #8b4aa5;
+            outline: 3px solid rgb(139 74 165 / 18%);
+        }
+
+        button {
+            width: 100%;
+            padding: 13px;
+            border: 0;
+            border-radius: 7px;
+            background: #e96818;
+            color: #fff;
+            font: inherit;
+            font-weight: 700;
+            cursor: pointer;
+            transition: background-color 150ms ease, transform 150ms ease;
+        }
+
+        button:hover {
+            background: #c94e0d;
+            transform: translateY(-1px);
+        }
+
+        button:focus-visible {
+            outline: 3px solid #71338b;
+            outline-offset: 3px;
+        }
+
+        #form-message {
+            min-height: 20px;
+            margin: 14px 0 0;
+            color: #542d68;
+            text-align: center;
+            font-size: 14px;
+        }
+    </style>
+</head>
+<body>
+    <main class="login-card">
+        <p class="pumpkin" aria-hidden="true">🎃</p>
+        <h1>Enter if You Dare</h1>
+        <p class="intro">Sign in for a delightfully spooky night.</p>
+        <form id="login-form">
+            <div class="field">
+                <label for="username">Username</label>
+                <input id="username" name="username" type="text" autocomplete="username" required>
+            </div>
+            <div class="field">
+                <label for="email">E-mail</label>
+                <input id="email" name="email" type="email" autocomplete="email" required>
+            </div>
+            <div class="field">
+                <label for="password">Password</label>
+                <input id="password" name="password" type="password" autocomplete="current-password" required>
+            </div>
+            <button type="submit">Log In</button>
+            <p id="form-message" role="status" aria-live="polite"></p>
+        </form>
+    </main>
+    <script>
+        document.getElementById("login-form").addEventListener("submit", function (event) {
+            event.preventDefault();
+            window.location.href = "landing page.html";
+        });
+    </script>
+</body>
+</html>
