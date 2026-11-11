@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 700">
+  <defs>
+    <linearGradient id="bg" x2="1" y2="1">
+      <stop stop-color="#142332"/>
+      <stop offset="1" stop-color="#10151e"/>
+    </linearGradient>
+    <radialGradient id="glow">
+      <stop stop-color="#ff6b35" stop-opacity=".32"/>
+      <stop offset="1" stop-color="#ff6b35" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <path fill="url(#bg)" d="M0 0h1200v700H0z"/>
+  <ellipse cx="830" cy="360" rx="440" ry="350" fill="url(#glow)"/>
+  <g transform="translate(650 135)">
+    <g transform="translate(0 75)">
+      <path fill="#090e16" stroke="#080b10" stroke-width="12" stroke-linejoin="round" d="m110 0 110 55v165l-110 60L0 220V55z"/>
+      <path fill="#ffcf33" stroke="#10151e" stroke-width="8" stroke-linejoin="round" d="m110 0 110 55-110 60L0 55z"/>
+      <path fill="#18bfc6" stroke="#10151e" stroke-width="8" stroke-linejoin="round" d="M0 55 110 115v165L0 220z"/>
+      <path fill="#ff6b35" stroke="#10151e" stroke-width="8" stroke-linejoin="round" d="m110 115 110-60v165l-110 60z"/>
+      <path fill="none" stroke="#10151e" stroke-width="7" d="M55 28v57m110-30v60M55 85v110m110-140v110M55 140l110 60M0 165l110 60m0-85 110-60m-110 115 110-60"/>
+    </g>
+    <path fill="none" stroke="#f5f7fa" stroke-width="12" stroke-linecap="round" stroke-linejoin="round" d="m285 195 55 55-55 55m35-55h100"/>
+    <g transform="translate(415 75)">
+      <path fill="#090e16" stroke="#080b10" stroke-width="12" stroke-linejoin="round" d="m110 0 110 55v165l-110 60L0 220V55z"/>
+      <path fill="#ffcf33" stroke="#10151e" stroke-width="8" stroke-linejoin="round" d="m110 0 110 55-110 60L0 55z"/>
+      <path fill="#f5f7fa" stroke="#10151e" stroke-width="8" stroke-linejoin="round" d="M0 55 110 115v165L0 220z"/>
+      <path fill="#18bfc6" stroke="#10151e" stroke-width="8" stroke-linejoin="round" d="m110 115 110-60v165l-110 60z"/>
+      <path fill="none" stroke="#10151e" stroke-width="7" d="M55 28v57m110-30v60M55 85v110m110-140v110M55 140l110 60M0 165l110 60m0-85 110-60m-110 115 110-60"/>
+    </g>
+  </g>
+</svg>
