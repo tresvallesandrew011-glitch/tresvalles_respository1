@@ -153,59 +153,53 @@
         .services-section {
             width: min(1100px, calc(100% - 40px));
             margin: 0 auto;
-            padding: 48px 0 64px;
-        }
-
-        .services-heading {
-            margin: 0 0 10px;
-            color: #f5f7fa;
-            font-size: clamp(28px, 5vw, 40px);
-            text-align: center;
-        }
-
-        .services-intro {
-            max-width: 620px;
-            margin: 0 auto 30px;
-            color: #c2ccd9;
-            line-height: 1.7;
-            text-align: center;
-        }
-
-        .service-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(min(100%, 300px), 1fr));
-            gap: 20px;
+            gap: 24px;
+            padding: 24px 0 64px;
         }
 
-        .service-card {
-            overflow: hidden;
-            border: 1px solid rgb(255 255 255 / 12%);
-            border-radius: 14px;
-            background: #17202d;
+        .service-feature {
+            min-height: clamp(620px, calc(100vh - 72px), 720px);
+            display: grid;
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+            align-items: center;
+            justify-items: center;
+            gap: 32px;
+            padding: clamp(28px, 6vw, 72px);
+            border-radius: 16px;
+            background:
+                linear-gradient(90deg, rgb(16 21 30 / 82%), rgb(16 21 30 / 38%)),
+                url("services-hero.svg") center / cover no-repeat;
+        }
+
+        .service-feature:nth-child(even) .service-art {
+            order: 1;
         }
 
         .service-art {
             display: block;
-            width: 100%;
-            height: 190px;
+            width: min(100%, 460px);
+            height: auto;
             background: linear-gradient(135deg, rgb(24 217 219 / 12%), rgb(255 207 51 / 8%));
+            filter: drop-shadow(0 14px 24px rgb(0 0 0 / 40%));
         }
 
-        .service-card-content {
-            padding: 20px;
+        .service-feature-content {
+            width: min(100%, 480px);
         }
 
-        .service-card h3 {
-            margin: 0 0 10px;
+        .service-feature h2 {
+            margin: 0 0 14px;
             color: #ffcf33;
-            font-size: 20px;
-            line-height: 1.35;
+            font-size: clamp(28px, 4vw, 40px);
+            line-height: 1.2;
         }
 
-        .service-card p {
+        .service-feature p {
             margin: 0;
             color: #c2ccd9;
-            line-height: 1.65;
+            font-size: 17px;
+            line-height: 1.7;
         }
 
         footer {
@@ -242,6 +236,26 @@
 
             .service-content {
                 padding: 20px 4px;
+            }
+
+            .services-section {
+                width: calc(100% - 24px);
+            }
+
+            .service-feature {
+                min-height: 620px;
+                grid-template-columns: 1fr;
+                gap: 20px;
+                padding: 28px 20px;
+                text-align: center;
+            }
+
+            .service-feature:nth-child(even) .service-art {
+                order: 0;
+            }
+
+            .service-art {
+                width: min(100%, 400px);
             }
         }
     </style>
@@ -300,13 +314,8 @@
         </section>
     </main>
 
-    <section class="services-section" aria-labelledby="services-heading">
-        <p class="eyebrow" style="text-align: center;">Train smarter. Turn faster.</p>
-        <h2 class="services-heading" id="services-heading">Tools for Every Solve</h2>
-        <p class="services-intro">From learning algorithms to competing with friends, Cube Lab gives you practical tools to build speed, consistency, and confidence.</p>
-
-        <div class="service-grid">
-            <article class="service-card">
+    <section class="services-section" aria-label="More Cube Lab services">
+            <article class="service-feature" aria-labelledby="algorithm-service-title">
                 <svg class="service-art" viewBox="0 0 400 220" role="img" aria-labelledby="algorithm-art-title" xmlns="http://www.w3.org/2000/svg">
                     <title id="algorithm-art-title">A cube and a searchable algorithm list</title>
                     <rect x="28" y="28" width="344" height="164" rx="18" fill="#121923" stroke="#324155" stroke-width="3"/>
@@ -318,13 +327,14 @@
                     <rect x="185" y="122" width="130" height="12" rx="6" fill="#ffcf33"/>
                     <rect x="185" y="150" width="94" height="12" rx="6" fill="#324155"/>
                 </svg>
-                <div class="service-card-content">
-                    <h3>Algorithm Database and Customizable Trainers</h3>
+                <div class="service-feature-content">
+                    <p class="eyebrow">Practice your way</p>
+                    <h2 id="algorithm-service-title">Algorithm Database and Customizable Trainers</h2>
                     <p>Explore organized algorithms by step and case, then build custom practice sets to focus on the moves you want to master.</p>
                 </div>
             </article>
 
-            <article class="service-card">
+            <article class="service-feature" aria-labelledby="timer-service-title">
                 <svg class="service-art" viewBox="0 0 400 220" role="img" aria-labelledby="timer-art-title" xmlns="http://www.w3.org/2000/svg">
                     <title id="timer-art-title">A solve timer beside a performance chart</title>
                     <rect x="28" y="28" width="344" height="164" rx="18" fill="#121923" stroke="#324155" stroke-width="3"/>
@@ -337,13 +347,14 @@
                     <circle cx="260" cy="139" r="5" fill="#18bfc6"/>
                     <circle cx="298" cy="87" r="5" fill="#18bfc6"/>
                 </svg>
-                <div class="service-card-content">
-                    <h3>Professional Web Timer &amp; Performance Analytics</h3>
+                <div class="service-feature-content">
+                    <p class="eyebrow">Measure your progress</p>
+                    <h2 id="timer-service-title">Professional Web Timer &amp; Performance Analytics</h2>
                     <p>Time solves with a clean, reliable timer and review session history, averages, and trends to see how your practice is progressing.</p>
                 </div>
             </article>
 
-            <article class="service-card">
+            <article class="service-feature" aria-labelledby="reconstruction-service-title">
                 <svg class="service-art" viewBox="0 0 400 220" role="img" aria-labelledby="reconstruction-art-title" xmlns="http://www.w3.org/2000/svg">
                     <title id="reconstruction-art-title">A solve timeline broken into move-by-move stages</title>
                     <rect x="28" y="28" width="344" height="164" rx="18" fill="#121923" stroke="#324155" stroke-width="3"/>
@@ -361,13 +372,14 @@
                     <rect x="216" y="66" width="44" height="8" rx="4" fill="#aeb9c8"/>
                     <rect x="291" y="151" width="44" height="8" rx="4" fill="#aeb9c8"/>
                 </svg>
-                <div class="service-card-content">
-                    <h3>Solve Reconstruction &amp; Breakdown Engine</h3>
+                <div class="service-feature-content">
+                    <p class="eyebrow">Learn from every turn</p>
+                    <h2 id="reconstruction-service-title">Solve Reconstruction &amp; Breakdown Engine</h2>
                     <p>Replay a solve one move at a time, inspect key stages, and spot pauses or inefficient turns with a clear breakdown of your attempt.</p>
                 </div>
             </article>
 
-            <article class="service-card">
+            <article class="service-feature" aria-labelledby="battle-service-title">
                 <svg class="service-art" viewBox="0 0 400 220" role="img" aria-labelledby="battle-art-title" xmlns="http://www.w3.org/2000/svg">
                     <title id="battle-art-title">Two cubers face off in a live timed match</title>
                     <rect x="28" y="28" width="344" height="164" rx="18" fill="#121923" stroke="#324155" stroke-width="3"/>
@@ -378,13 +390,14 @@
                     <path d="M170 78h60M170 108h60M170 138h60" stroke="#324155" stroke-linecap="round" stroke-width="7"/>
                     <text x="200" y="67" fill="#ffcf33" font-family="Arial, sans-serif" font-size="18" font-weight="700" text-anchor="middle">VS</text>
                 </svg>
-                <div class="service-card-content">
-                    <h3>Live 1v1 Battle Rooms &amp; Contests</h3>
+                <div class="service-feature-content">
+                    <p class="eyebrow">Bring on the challenge</p>
+                    <h2 id="battle-service-title">Live 1v1 Battle Rooms &amp; Contests</h2>
                     <p>Join a room, race another cuber in real time, and take part in friendly contests that make every practice session more exciting.</p>
                 </div>
             </article>
 
-            <article class="service-card">
+            <article class="service-feature" aria-labelledby="coaching-service-title">
                 <svg class="service-art" viewBox="0 0 400 220" role="img" aria-labelledby="coaching-art-title" xmlns="http://www.w3.org/2000/svg">
                     <title id="coaching-art-title">Personal coaching notes with solve statistics</title>
                     <rect x="28" y="28" width="344" height="164" rx="18" fill="#121923" stroke="#324155" stroke-width="3"/>
@@ -396,12 +409,12 @@
                     <rect x="269" y="119" width="68" height="10" rx="5" fill="#aeb9c8"/>
                     <rect x="224" y="157" width="113" height="7" rx="4" fill="#ffcf33"/>
                 </svg>
-                <div class="service-card-content">
-                    <h3>Personalized Coaching &amp; Solve Audits</h3>
+                <div class="service-feature-content">
+                    <p class="eyebrow">One-on-one improvement</p>
+                    <h2 id="coaching-service-title">Personalized Coaching &amp; Solve Audits</h2>
                     <p>Get actionable feedback on your solves, identify habits holding you back, and follow tailored coaching recommendations at your own pace.</p>
                 </div>
             </article>
-        </div>
     </section>
 
     <footer>Keep turning. Keep learning. 🧩</footer>
