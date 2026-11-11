@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="theme-color" content="#10151e">
-    <title>Cube Lab | Tutorials</title>
+    <title>Cube Lab | Services</title>
     <style>
         * {
             box-sizing: border-box;
@@ -150,6 +150,64 @@
             outline-offset: 3px;
         }
 
+        .services-section {
+            width: min(1100px, calc(100% - 40px));
+            margin: 0 auto;
+            padding: 48px 0 64px;
+        }
+
+        .services-heading {
+            margin: 0 0 10px;
+            color: #f5f7fa;
+            font-size: clamp(28px, 5vw, 40px);
+            text-align: center;
+        }
+
+        .services-intro {
+            max-width: 620px;
+            margin: 0 auto 30px;
+            color: #c2ccd9;
+            line-height: 1.7;
+            text-align: center;
+        }
+
+        .service-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(min(100%, 300px), 1fr));
+            gap: 20px;
+        }
+
+        .service-card {
+            overflow: hidden;
+            border: 1px solid rgb(255 255 255 / 12%);
+            border-radius: 14px;
+            background: #17202d;
+        }
+
+        .service-art {
+            display: block;
+            width: 100%;
+            height: 190px;
+            background: linear-gradient(135deg, rgb(24 217 219 / 12%), rgb(255 207 51 / 8%));
+        }
+
+        .service-card-content {
+            padding: 20px;
+        }
+
+        .service-card h3 {
+            margin: 0 0 10px;
+            color: #ffcf33;
+            font-size: 20px;
+            line-height: 1.35;
+        }
+
+        .service-card p {
+            margin: 0;
+            color: #c2ccd9;
+            line-height: 1.65;
+        }
+
         footer {
             padding: 22px 20px;
             border-top: 1px solid rgb(255 255 255 / 12%);
@@ -241,6 +299,110 @@
             <a class="back-link" href="landing page.html">Back to Cube Lab</a>
         </section>
     </main>
+
+    <section class="services-section" aria-labelledby="services-heading">
+        <p class="eyebrow" style="text-align: center;">Train smarter. Turn faster.</p>
+        <h2 class="services-heading" id="services-heading">Tools for Every Solve</h2>
+        <p class="services-intro">From learning algorithms to competing with friends, Cube Lab gives you practical tools to build speed, consistency, and confidence.</p>
+
+        <div class="service-grid">
+            <article class="service-card">
+                <svg class="service-art" viewBox="0 0 400 220" role="img" aria-labelledby="algorithm-art-title" xmlns="http://www.w3.org/2000/svg">
+                    <title id="algorithm-art-title">A cube and a searchable algorithm list</title>
+                    <rect x="28" y="28" width="344" height="164" rx="18" fill="#121923" stroke="#324155" stroke-width="3"/>
+                    <path d="m104 54 46 25v54l-46 26-46-26V79z" fill="#ffcf33" stroke="#10151e" stroke-width="7"/>
+                    <path d="m58 79 46 26v54l-46-26z" fill="#18bfc6" stroke="#10151e" stroke-width="6"/>
+                    <path d="m104 105 46-26v54l-46 26z" fill="#ff6b35" stroke="#10151e" stroke-width="6"/>
+                    <rect x="185" y="63" width="145" height="15" rx="7" fill="#324155"/>
+                    <rect x="185" y="94" width="112" height="12" rx="6" fill="#18bfc6"/>
+                    <rect x="185" y="122" width="130" height="12" rx="6" fill="#ffcf33"/>
+                    <rect x="185" y="150" width="94" height="12" rx="6" fill="#324155"/>
+                </svg>
+                <div class="service-card-content">
+                    <h3>Algorithm Database and Customizable Trainers</h3>
+                    <p>Explore organized algorithms by step and case, then build custom practice sets to focus on the moves you want to master.</p>
+                </div>
+            </article>
+
+            <article class="service-card">
+                <svg class="service-art" viewBox="0 0 400 220" role="img" aria-labelledby="timer-art-title" xmlns="http://www.w3.org/2000/svg">
+                    <title id="timer-art-title">A solve timer beside a performance chart</title>
+                    <rect x="28" y="28" width="344" height="164" rx="18" fill="#121923" stroke="#324155" stroke-width="3"/>
+                    <circle cx="119" cy="111" r="58" fill="#17202d" stroke="#18bfc6" stroke-width="7"/>
+                    <path d="M119 69v43l28 17" fill="none" stroke="#ffcf33" stroke-linecap="round" stroke-width="8"/>
+                    <path d="M101 42h36" stroke="#18bfc6" stroke-linecap="round" stroke-width="8"/>
+                    <path d="M204 154 235 127l25 12 38-52" fill="none" stroke="#ffcf33" stroke-linecap="round" stroke-linejoin="round" stroke-width="7"/>
+                    <path d="M203 164h119M203 164V64" fill="none" stroke="#324155" stroke-width="3"/>
+                    <circle cx="235" cy="127" r="5" fill="#18bfc6"/>
+                    <circle cx="260" cy="139" r="5" fill="#18bfc6"/>
+                    <circle cx="298" cy="87" r="5" fill="#18bfc6"/>
+                </svg>
+                <div class="service-card-content">
+                    <h3>Professional Web Timer &amp; Performance Analytics</h3>
+                    <p>Time solves with a clean, reliable timer and review session history, averages, and trends to see how your practice is progressing.</p>
+                </div>
+            </article>
+
+            <article class="service-card">
+                <svg class="service-art" viewBox="0 0 400 220" role="img" aria-labelledby="reconstruction-art-title" xmlns="http://www.w3.org/2000/svg">
+                    <title id="reconstruction-art-title">A solve timeline broken into move-by-move stages</title>
+                    <rect x="28" y="28" width="344" height="164" rx="18" fill="#121923" stroke="#324155" stroke-width="3"/>
+                    <path d="M83 112h234" stroke="#324155" stroke-width="8"/>
+                    <circle cx="88" cy="112" r="24" fill="#18bfc6"/>
+                    <circle cx="163" cy="112" r="24" fill="#ffcf33"/>
+                    <circle cx="238" cy="112" r="24" fill="#ff6b35"/>
+                    <circle cx="313" cy="112" r="24" fill="#18bfc6"/>
+                    <text x="88" y="118" fill="#10151e" font-family="Arial, sans-serif" font-size="16" font-weight="700" text-anchor="middle">1</text>
+                    <text x="163" y="118" fill="#10151e" font-family="Arial, sans-serif" font-size="16" font-weight="700" text-anchor="middle">2</text>
+                    <text x="238" y="118" fill="#10151e" font-family="Arial, sans-serif" font-size="16" font-weight="700" text-anchor="middle">3</text>
+                    <text x="313" y="118" fill="#10151e" font-family="Arial, sans-serif" font-size="16" font-weight="700" text-anchor="middle">4</text>
+                    <rect x="66" y="66" width="44" height="8" rx="4" fill="#aeb9c8"/>
+                    <rect x="141" y="151" width="44" height="8" rx="4" fill="#aeb9c8"/>
+                    <rect x="216" y="66" width="44" height="8" rx="4" fill="#aeb9c8"/>
+                    <rect x="291" y="151" width="44" height="8" rx="4" fill="#aeb9c8"/>
+                </svg>
+                <div class="service-card-content">
+                    <h3>Solve Reconstruction &amp; Breakdown Engine</h3>
+                    <p>Replay a solve one move at a time, inspect key stages, and spot pauses or inefficient turns with a clear breakdown of your attempt.</p>
+                </div>
+            </article>
+
+            <article class="service-card">
+                <svg class="service-art" viewBox="0 0 400 220" role="img" aria-labelledby="battle-art-title" xmlns="http://www.w3.org/2000/svg">
+                    <title id="battle-art-title">Two cubers face off in a live timed match</title>
+                    <rect x="28" y="28" width="344" height="164" rx="18" fill="#121923" stroke="#324155" stroke-width="3"/>
+                    <circle cx="110" cy="88" r="24" fill="#18bfc6"/>
+                    <path d="M66 158c5-28 22-42 44-42s39 14 44 42" fill="#18bfc6"/>
+                    <circle cx="290" cy="88" r="24" fill="#ff6b35"/>
+                    <path d="M246 158c5-28 22-42 44-42s39 14 44 42" fill="#ff6b35"/>
+                    <path d="M170 78h60M170 108h60M170 138h60" stroke="#324155" stroke-linecap="round" stroke-width="7"/>
+                    <text x="200" y="67" fill="#ffcf33" font-family="Arial, sans-serif" font-size="18" font-weight="700" text-anchor="middle">VS</text>
+                </svg>
+                <div class="service-card-content">
+                    <h3>Live 1v1 Battle Rooms &amp; Contests</h3>
+                    <p>Join a room, race another cuber in real time, and take part in friendly contests that make every practice session more exciting.</p>
+                </div>
+            </article>
+
+            <article class="service-card">
+                <svg class="service-art" viewBox="0 0 400 220" role="img" aria-labelledby="coaching-art-title" xmlns="http://www.w3.org/2000/svg">
+                    <title id="coaching-art-title">Personal coaching notes with solve statistics</title>
+                    <rect x="28" y="28" width="344" height="164" rx="18" fill="#121923" stroke="#324155" stroke-width="3"/>
+                    <rect x="59" y="58" width="126" height="112" rx="12" fill="#17202d" stroke="#324155" stroke-width="3"/>
+                    <circle cx="122" cy="92" r="20" fill="#ffcf33"/>
+                    <path d="M83 151c4-22 18-34 39-34s35 12 39 34" fill="#18bfc6"/>
+                    <path d="m224 90 11 11 20-23M224 127l11 11 20-23" fill="none" stroke="#18bfc6" stroke-linecap="round" stroke-linejoin="round" stroke-width="7"/>
+                    <rect x="269" y="82" width="68" height="10" rx="5" fill="#aeb9c8"/>
+                    <rect x="269" y="119" width="68" height="10" rx="5" fill="#aeb9c8"/>
+                    <rect x="224" y="157" width="113" height="7" rx="4" fill="#ffcf33"/>
+                </svg>
+                <div class="service-card-content">
+                    <h3>Personalized Coaching &amp; Solve Audits</h3>
+                    <p>Get actionable feedback on your solves, identify habits holding you back, and follow tailored coaching recommendations at your own pace.</p>
+                </div>
+            </article>
+        </div>
+    </section>
 
     <footer>Keep turning. Keep learning. 🧩</footer>
 </body>
