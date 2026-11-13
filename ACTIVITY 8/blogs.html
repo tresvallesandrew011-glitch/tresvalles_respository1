@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#10151e">
+    <title>Cube Lab | Cube Notes</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            min-height: 100vh;
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+            background:
+                radial-gradient(ellipse at 12% 15%, rgb(24 217 219 / 14%), transparent 32%),
+                radial-gradient(ellipse at 90% 65%, rgb(255 207 51 / 10%), transparent 30%),
+                #10151e;
+            color: #f5f7fa;
+            font-family: Arial, sans-serif;
+        }
+
+        .site-header {
+            border-bottom: 1px solid rgb(255 255 255 / 12%);
+            background: rgb(16 21 30 / 94%);
+        }
+
+        .navbar {
+            width: min(1100px, calc(100% - 40px));
+            min-height: 72px;
+            margin: 0 auto;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 24px;
+        }
+
+        .brand {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            color: #ffcf33;
+            font-size: 20px;
+            font-weight: 800;
+            text-decoration: none;
+            white-space: nowrap;
+        }
+
+        .brand img {
+            width: 42px;
+            height: 42px;
+            object-fit: contain;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 8px;
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+
+        .nav-links a {
+            display: block;
+            padding: 10px 14px;
+            border-radius: 7px;
+            color: #e5eaf1;
+            font-size: 15px;
+            font-weight: 700;
+            text-decoration: none;
+        }
+
+        .nav-links a:hover,
+        .nav-links a:focus-visible,
+        .nav-links a[aria-current="page"] {
+            background: rgb(24 217 219 / 14%);
+            color: #18d9db;
+            outline: none;
+        }
+
+        main {
+            flex: 1;
+            width: min(1100px, calc(100% - 40px));
+            margin: 0 auto;
+            display: grid;
+            place-items: center;
+            padding: 40px 0;
+            text-align: center;
+            border-radius: 16px;
+            background:
+                linear-gradient(90deg, rgb(16 21 30 / 82%), rgb(16 21 30 / 38%)),
+                url("blogs-hero.svg") center / cover no-repeat;
+        }
+
+        .blog-content {
+            width: min(100%, 660px);
+            padding: 24px;
+        }
+
+        .eyebrow {
+            margin: 0 0 12px;
+            color: #ffcf33;
+            font-size: 13px;
+            font-weight: 800;
+            letter-spacing: 0.16em;
+            text-transform: uppercase;
+        }
+
+        h1 {
+            margin: 0;
+            color: #f5f7fa;
+            font-size: clamp(34px, 7vw, 56px);
+        }
+
+        .intro {
+            max-width: 520px;
+            margin: 14px auto 20px;
+            color: #c2ccd9;
+            line-height: 1.7;
+        }
+
+        .book-art {
+            display: block;
+            width: min(100%, 390px);
+            height: auto;
+            margin: 0 auto;
+            filter: drop-shadow(0 14px 24px rgb(0 0 0 / 40%));
+        }
+
+        .back-link {
+            display: inline-block;
+            margin-top: 12px;
+            padding: 12px 18px;
+            border-radius: 7px;
+            background: #18bfc6;
+            color: #fff;
+            font-weight: 700;
+            text-decoration: none;
+        }
+
+        .back-link:hover {
+            background: #0e929b;
+        }
+
+        .back-link:focus-visible {
+            outline: 3px solid #ffcf33;
+            outline-offset: 3px;
+        }
+
+        footer {
+            padding: 22px 20px;
+            border-top: 1px solid rgb(255 255 255 / 12%);
+            color: #aeb9c8;
+            text-align: center;
+            font-size: 14px;
+        }
+
+        @media (max-width: 520px) {
+            .navbar {
+                width: calc(100% - 24px);
+                min-height: 64px;
+                gap: 6px;
+            }
+
+            .brand {
+                font-size: 17px;
+            }
+
+            .nav-links {
+                gap: 0;
+            }
+
+            .nav-links a {
+                padding: 9px 7px;
+                font-size: 13px;
+            }
+
+            main {
+                width: calc(100% - 24px);
+            }
+
+            .blog-content {
+                padding: 20px 4px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header class="site-header">
+        <nav class="navbar" aria-label="Main navigation">
+            <a class="brand" href="landing page.html">
+                <img src="OfficialLogo.png" alt="">
+                <span>Cube Lab</span>
+            </a>
+            <ul class="nav-links">
+                <li><a href="services.html">Services</a></li>
+                <li><a href="blogs.html" aria-current="page">Blogs</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="blog-content" aria-labelledby="page-title">
+            <p class="eyebrow">Tips, tricks, and algorithms</p>
+            <h1 id="page-title">Cube Notes</h1>
+            <p class="intro">Explore practical advice for learning notation, improving your turning, and building a consistent solving routine.</p>
+            <svg class="book-art" viewBox="0 0 420 340" role="img" aria-labelledby="book-title book-description" xmlns="http://www.w3.org/2000/svg">
+                <title id="book-title">Rubik's Cube notation and practice guide</title>
+                <desc id="book-description">An open tutorial notebook showing cube-turn notation next to a colorful puzzle cube.</desc>
+                <ellipse cx="208" cy="294" rx="154" ry="18" fill="#05080d" opacity=".55"/>
+                <path d="M46 110c55-24 109-16 164 7v150c-53-25-108-32-164-8-9 5-19-1-19-11V128c0-8 8-15 19-18z" fill="#17202d" stroke="#080b10" stroke-linejoin="round" stroke-width="8"/>
+                <path d="M374 110c-55-24-109-16-164 7v150c53-25 108-32 164-8 9 5 19-1 19-11V128c0-8-8-15-19-18z" fill="#202d3e" stroke="#080b10" stroke-linejoin="round" stroke-width="8"/>
+                <path d="M50 126c48-19 100-11 150 8v116c-50-20-101-25-150-7-5 2-9-1-9-6V137c0-5 3-9 9-11zm316 0c-48-19-100-11-150 8v116c50-20 101-25 150-7 5 2 9-1 9-6V137c0-5-3-9-9-11z" fill="#f5f7fa" stroke="#18bfc6" stroke-width="5"/>
+                <path d="M210 117v149" stroke="#18bfc6" stroke-linecap="round" stroke-width="8"/>
+                <path d="M67 150h105m-105 21h105m-105 21h77m116-42h105m-105 21h105m-105 21h77" fill="none" stroke="#99a7b8" stroke-linecap="round" stroke-width="5"/>
+                <text x="81" y="238" fill="#159ca3" font-family="Arial, sans-serif" font-size="25" font-weight="700">R U R' U'</text>
+                <text x="245" y="238" fill="#159ca3" font-family="Arial, sans-serif" font-size="25" font-weight="700">F R U</text>
+                <g transform="translate(291 35)">
+                    <path d="m44 0 43 22v49L44 94 1 71V22z" fill="#10151e" stroke="#080b10" stroke-width="6"/>
+                    <path d="m44 0 43 22-43 23L1 22z" fill="#ffcf33" stroke="#10151e" stroke-width="4"/>
+                    <path d="m1 22 43 23v49L1 71z" fill="#f5f7fa" stroke="#10151e" stroke-width="4"/>
+                    <path d="m44 45 43-23v49L44 94z" fill="#18bfc6" stroke="#10151e" stroke-width="4"/>
+                    <path d="M22 11v23m44-12v23M22 33v27m44-38v27M22 47v33m44-44v33" stroke="#10151e" stroke-width="3"/>
+                </g>
+            </svg>
+            <a class="back-link" href="landing page.html">Back to the Landing Page</a>
+        </section>
+    </main>
+
+    <footer>Keep turning. Keep learning. 🧩</footer>
+</body>
+</html>

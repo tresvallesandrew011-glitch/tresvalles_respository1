@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 700">
+  <defs>
+    <linearGradient id="bg" x2="1" y2="1">
+      <stop stop-color="#172334"/>
+      <stop offset="1" stop-color="#10151e"/>
+    </linearGradient>
+    <radialGradient id="glow">
+      <stop stop-color="#18bfc6" stop-opacity=".42"/>
+      <stop offset="1" stop-color="#18bfc6" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <path fill="url(#bg)" d="M0 0h1200v700H0z"/>
+  <ellipse cx="850" cy="360" rx="410" ry="330" fill="url(#glow)"/>
+  <g transform="translate(650 105) skewY(4)">
+    <path fill="#080d15" stroke="#080b10" stroke-width="18" stroke-linejoin="round" d="m240 0 228 115v345L240 580 12 460V115z"/>
+    <path fill="#ffcf33" stroke="#10151e" stroke-width="10" stroke-linejoin="round" d="m240 0 228 115-228 120L12 115z"/>
+    <path fill="#f5f7fa" stroke="#10151e" stroke-width="10" stroke-linejoin="round" d="m12 115 228 120v345L12 460z"/>
+    <path fill="#18bfc6" stroke="#10151e" stroke-width="10" stroke-linejoin="round" d="m240 235 228-120v345L240 580z"/>
+    <path fill="none" stroke="#10151e" stroke-width="10" d="m88 75 228 120M164 35l228 120M88 190v230m76-190v230m152-230v230m76-270v230M88 266l228 120M12 345l228 120m76-210 228-120m-228 196 228-120m-228 196 228-120"/>
+  </g>
+</svg>
