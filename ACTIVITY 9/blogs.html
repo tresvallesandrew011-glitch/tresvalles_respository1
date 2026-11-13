@@ -85,19 +85,23 @@
             flex: 1;
             width: min(1100px, calc(100% - 40px));
             margin: 0 auto;
+            padding: 40px 0 56px;
+        }
+
+        .blog-hero {
             display: grid;
             place-items: center;
-            padding: 40px 0;
-            text-align: center;
+            min-height: 300px;
+            padding: 36px 24px;
             border-radius: 16px;
             background:
                 linear-gradient(90deg, rgb(16 21 30 / 82%), rgb(16 21 30 / 38%)),
                 url("blogs-hero.svg") center / cover no-repeat;
+            text-align: center;
         }
 
         .blog-content {
             width: min(100%, 660px);
-            padding: 24px;
         }
 
         .eyebrow {
@@ -112,42 +116,90 @@
         h1 {
             margin: 0;
             color: #f5f7fa;
-            font-size: clamp(34px, 7vw, 56px);
+            font-size: clamp(36px, 7vw, 56px);
         }
 
         .intro {
-            max-width: 520px;
-            margin: 14px auto 20px;
+            max-width: 560px;
+            margin: 14px auto 0;
             color: #c2ccd9;
             line-height: 1.7;
         }
 
-        .book-art {
-            display: block;
-            width: min(100%, 390px);
-            height: auto;
-            margin: 0 auto;
-            filter: drop-shadow(0 14px 24px rgb(0 0 0 / 40%));
+        .blog-grid {
+            display: grid;
+            grid-template-columns: repeat(3, minmax(0, 1fr));
+            gap: 22px;
+            margin-top: 32px;
         }
 
-        .back-link {
-            display: inline-block;
-            margin-top: 12px;
-            padding: 12px 18px;
-            border-radius: 7px;
-            background: #18bfc6;
-            color: #fff;
-            font-weight: 700;
+        .blog-card {
+            overflow: hidden;
+            border: 1px solid rgb(255 255 255 / 12%);
+            border-radius: 12px;
+            background: #17202d;
+            box-shadow: 0 14px 30px rgb(0 0 0 / 22%);
+            transition: transform 160ms ease, border-color 160ms ease, box-shadow 160ms ease;
+        }
+
+        .blog-card:hover,
+        .blog-card:focus-within {
+            transform: translateY(-4px);
+            border-color: rgb(24 217 219 / 60%);
+            box-shadow: 0 18px 36px rgb(0 0 0 / 32%);
+        }
+
+        .blog-card a {
+            display: flex;
+            height: 100%;
+            flex-direction: column;
+            color: inherit;
             text-decoration: none;
         }
 
-        .back-link:hover {
-            background: #0e929b;
+        .blog-card a:focus-visible {
+            outline: 3px solid #ffcf33;
+            outline-offset: -3px;
         }
 
-        .back-link:focus-visible {
-            outline: 3px solid #ffcf33;
-            outline-offset: 3px;
+        .blog-card img {
+            display: block;
+            width: 100%;
+            aspect-ratio: 16 / 9;
+            object-fit: cover;
+        }
+
+        .card-content {
+            display: flex;
+            flex: 1;
+            flex-direction: column;
+            align-items: flex-start;
+            padding: 20px;
+        }
+
+        .card-content .eyebrow {
+            margin-bottom: 10px;
+            font-size: 11px;
+        }
+
+        .card-content h2 {
+            margin: 0;
+            color: #f5f7fa;
+            font-size: 21px;
+            line-height: 1.3;
+        }
+
+        .card-content p:not(.eyebrow) {
+            margin: 12px 0 20px;
+            color: #c2ccd9;
+            font-size: 15px;
+            line-height: 1.6;
+        }
+
+        .read-more {
+            margin-top: auto;
+            color: #18d9db;
+            font-weight: 700;
         }
 
         footer {
@@ -156,6 +208,12 @@
             color: #aeb9c8;
             text-align: center;
             font-size: 14px;
+        }
+
+        @media (max-width: 800px) {
+            .blog-grid {
+                grid-template-columns: repeat(2, minmax(0, 1fr));
+            }
         }
 
         @media (max-width: 520px) {
@@ -180,10 +238,18 @@
 
             main {
                 width: calc(100% - 24px);
+                padding-top: 24px;
             }
 
-            .blog-content {
-                padding: 20px 4px;
+            .blog-hero {
+                min-height: 260px;
+                padding: 28px 18px;
+            }
+
+            .blog-grid {
+                grid-template-columns: 1fr;
+                gap: 16px;
+                margin-top: 22px;
             }
         }
     </style>
@@ -203,30 +269,50 @@
     </header>
 
     <main>
-        <section class="blog-content" aria-labelledby="page-title">
-            <p class="eyebrow">Tips, tricks, and algorithms</p>
-            <h1 id="page-title">Cube Notes</h1>
-            <p class="intro">Explore practical advice for learning notation, improving your turning, and building a consistent solving routine.</p>
-            <svg class="book-art" viewBox="0 0 420 340" role="img" aria-labelledby="book-title book-description" xmlns="http://www.w3.org/2000/svg">
-                <title id="book-title">Rubik's Cube notation and practice guide</title>
-                <desc id="book-description">An open tutorial notebook showing cube-turn notation next to a colorful puzzle cube.</desc>
-                <ellipse cx="208" cy="294" rx="154" ry="18" fill="#05080d" opacity=".55"/>
-                <path d="M46 110c55-24 109-16 164 7v150c-53-25-108-32-164-8-9 5-19-1-19-11V128c0-8 8-15 19-18z" fill="#17202d" stroke="#080b10" stroke-linejoin="round" stroke-width="8"/>
-                <path d="M374 110c-55-24-109-16-164 7v150c53-25 108-32 164-8 9 5 19-1 19-11V128c0-8-8-15-19-18z" fill="#202d3e" stroke="#080b10" stroke-linejoin="round" stroke-width="8"/>
-                <path d="M50 126c48-19 100-11 150 8v116c-50-20-101-25-150-7-5 2-9-1-9-6V137c0-5 3-9 9-11zm316 0c-48-19-100-11-150 8v116c50-20 101-25 150-7 5 2 9-1 9-6V137c0-5-3-9-9-11z" fill="#f5f7fa" stroke="#18bfc6" stroke-width="5"/>
-                <path d="M210 117v149" stroke="#18bfc6" stroke-linecap="round" stroke-width="8"/>
-                <path d="M67 150h105m-105 21h105m-105 21h77m116-42h105m-105 21h105m-105 21h77" fill="none" stroke="#99a7b8" stroke-linecap="round" stroke-width="5"/>
-                <text x="81" y="238" fill="#159ca3" font-family="Arial, sans-serif" font-size="25" font-weight="700">R U R' U'</text>
-                <text x="245" y="238" fill="#159ca3" font-family="Arial, sans-serif" font-size="25" font-weight="700">F R U</text>
-                <g transform="translate(291 35)">
-                    <path d="m44 0 43 22v49L44 94 1 71V22z" fill="#10151e" stroke="#080b10" stroke-width="6"/>
-                    <path d="m44 0 43 22-43 23L1 22z" fill="#ffcf33" stroke="#10151e" stroke-width="4"/>
-                    <path d="m1 22 43 23v49L1 71z" fill="#f5f7fa" stroke="#10151e" stroke-width="4"/>
-                    <path d="m44 45 43-23v49L44 94z" fill="#18bfc6" stroke="#10151e" stroke-width="4"/>
-                    <path d="M22 11v23m44-12v23M22 33v27m44-38v27M22 47v33m44-44v33" stroke="#10151e" stroke-width="3"/>
-                </g>
-            </svg>
-            <a class="back-link" href="landing page.html">Back to the Landing Page</a>
+        <section class="blog-hero" aria-labelledby="page-title">
+            <div class="blog-content">
+                <p class="eyebrow">Tips, tricks, and algorithms</p>
+                <h1 id="page-title">Cube Notes</h1>
+                <p class="intro">Explore practical advice for choosing a solving method, improving your times, and turning the cube more smoothly.</p>
+            </div>
+        </section>
+
+        <section class="blog-grid" aria-label="Cube Lab articles">
+            <article class="blog-card">
+                <a href="blog1.html">
+                    <img src="blog1-thumbnail.png" alt="CFOP vs Roux vs ZZ speedcubing method comparison">
+                    <div class="card-content">
+                        <p class="eyebrow">Choose your method</p>
+                        <h2>CFOP vs Roux vs ZZ: Which Speedcubing Method Is Best for You?</h2>
+                        <p>Compare the strengths, trade-offs, and styles of three popular speedcubing methods to find the one that suits you.</p>
+                        <span class="read-more">Read article&nbsp; →</span>
+                    </div>
+                </a>
+            </article>
+
+            <article class="blog-card">
+                <a href="blog2.html">
+                    <img src="blog2-thumbnail.png" alt="Solved cube illustrating ways to cut your solve time">
+                    <div class="card-content">
+                        <p class="eyebrow">Improve your solves</p>
+                        <h2>How to Reduce Your Solving Time</h2>
+                        <p>Build better lookahead, make efficient turns, practice with purpose, and track progress without burning out.</p>
+                        <span class="read-more">Read article&nbsp; →</span>
+                    </div>
+                </a>
+            </article>
+
+            <article class="blog-card">
+                <a href="blog3.html">
+                    <img src="blog3-thumbnail.png" alt="Speedcube illustrating fast finger tricks">
+                    <div class="card-content">
+                        <p class="eyebrow">Turn more smoothly</p>
+                        <h2>The Best Finger Tricks for Speedcubing</h2>
+                        <p>Learn the essential flicks, pulls, and pushes that make algorithms faster, smoother, and easier on your hands.</p>
+                        <span class="read-more">Read article&nbsp; →</span>
+                    </div>
+                </a>
+            </article>
         </section>
     </main>
 
