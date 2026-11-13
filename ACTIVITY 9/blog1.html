@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#10151e">
+    <title>CFOP vs Roux vs ZZ | Cube Lab</title>
+    <style>
+        * { box-sizing: border-box; }
+
+        body {
+            min-height: 100vh;
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+            background:
+                radial-gradient(ellipse at 12% 15%, rgb(24 217 219 / 14%), transparent 32%),
+                radial-gradient(ellipse at 90% 65%, rgb(255 207 51 / 10%), transparent 30%),
+                #10151e;
+            color: #f5f7fa;
+            font-family: Arial, sans-serif;
+        }
+
+        .site-header { border-bottom: 1px solid rgb(255 255 255 / 12%); background: rgb(16 21 30 / 94%); }
+        .navbar {
+            width: min(1100px, calc(100% - 40px));
+            min-height: 72px;
+            margin: 0 auto;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 24px;
+        }
+        .brand {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            color: #ffcf33;
+            font-size: 20px;
+            font-weight: 800;
+            text-decoration: none;
+            white-space: nowrap;
+        }
+        .brand img { width: 42px; height: 42px; object-fit: contain; }
+        .nav-links { display: flex; gap: 8px; margin: 0; padding: 0; list-style: none; }
+        .nav-links a {
+            display: block;
+            padding: 10px 14px;
+            border-radius: 7px;
+            color: #e5eaf1;
+            font-size: 15px;
+            font-weight: 700;
+            text-decoration: none;
+        }
+        .nav-links a:hover, .nav-links a:focus-visible, .nav-links a[aria-current="page"] {
+            background: rgb(24 217 219 / 14%);
+            color: #18d9db;
+            outline: none;
+        }
+        main { flex: 1; width: min(900px, calc(100% - 40px)); margin: 0 auto; padding: 40px 0 56px; }
+        .article {
+            overflow: hidden;
+            border: 1px solid rgb(255 255 255 / 12%);
+            border-radius: 16px;
+            background: rgb(23 32 45 / 88%);
+            box-shadow: 0 18px 45px rgb(0 0 0 / 28%);
+        }
+        .article-image { display: block; width: 100%; aspect-ratio: 16 / 7; object-fit: cover; }
+        .article-content { padding: clamp(24px, 5vw, 48px); }
+        .eyebrow {
+            margin: 0 0 12px;
+            color: #ffcf33;
+            font-size: 13px;
+            font-weight: 800;
+            letter-spacing: 0.16em;
+            text-transform: uppercase;
+        }
+        h1 { margin: 0; color: #f5f7fa; font-size: clamp(32px, 6vw, 48px); line-height: 1.15; }
+        .lead { margin: 18px 0 30px; color: #c2ccd9; font-size: 18px; line-height: 1.75; }
+        h2 { margin: 32px 0 12px; color: #ffcf33; font-size: 27px; }
+        h3 { margin: 22px 0 8px; color: #18d9db; font-size: 20px; }
+        p, li { color: #d3dbe6; line-height: 1.75; }
+        p { margin: 0 0 14px; }
+        ul, ol { margin: 8px 0 18px; padding-left: 24px; }
+        li { padding-left: 4px; margin-bottom: 6px; }
+        .comparison-wrap { overflow-x: auto; margin: 16px 0 24px; }
+        table { width: 100%; min-width: 520px; border-collapse: collapse; text-align: left; }
+        th, td { padding: 12px 14px; border: 1px solid rgb(255 255 255 / 14%); }
+        th { background: rgb(24 217 219 / 14%); color: #18d9db; }
+        td { color: #d3dbe6; }
+        .pro-tip { padding: 18px 20px; border-left: 4px solid #ffcf33; border-radius: 0 8px 8px 0; background: rgb(255 207 51 / 8%); }
+        .pro-tip strong { color: #ffcf33; }
+        .back-link {
+            display: inline-block;
+            margin-top: 30px;
+            padding: 12px 18px;
+            border-radius: 7px;
+            background: #18bfc6;
+            color: #fff;
+            font-weight: 700;
+            text-decoration: none;
+        }
+        .back-link:hover { background: #0e929b; }
+        .back-link:focus-visible { outline: 3px solid #ffcf33; outline-offset: 3px; }
+        footer { padding: 22px 20px; border-top: 1px solid rgb(255 255 255 / 12%); color: #aeb9c8; text-align: center; font-size: 14px; }
+        @media (max-width: 520px) {
+            .navbar { width: calc(100% - 24px); min-height: 64px; gap: 6px; }
+            .brand { font-size: 17px; }
+            .nav-links { gap: 0; }
+            .nav-links a { padding: 9px 7px; font-size: 13px; }
+            main { width: calc(100% - 24px); padding-top: 24px; }
+            .article-image { aspect-ratio: 4 / 3; }
+        }
+    </style>
+</head>
+<body>
+    <header class="site-header">
+        <nav class="navbar" aria-label="Main navigation">
+            <a class="brand" href="landing page.html">
+                <img src="OfficialLogo.png" alt="">
+                <span>Cube Lab</span>
+            </a>
+            <ul class="nav-links">
+                <li><a href="services.html">Services</a></li>
+                <li><a href="blogs.html" aria-current="page">Blogs</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <article class="article">
+            <img class="article-image" src="blog1-thumbnail.png" alt="CFOP vs Roux vs ZZ speedcubing method comparison">
+            <div class="article-content">
+                <p class="eyebrow">Choose your speedcubing method</p>
+                <h1>CFOP vs Roux vs ZZ: Which Speedcubing Method Is Best for You?</h1>
+                <p class="lead">Every speedcuber eventually asks the same question: which method should I use? CFOP, Roux, and ZZ can all take you to elite times, but they feel very different in your hands. This guide breaks down how each one works, where it shines, and how to pick the one that fits you.</p>
+
+                <h2>CFOP (Fridrich Method)</h2>
+                <p>CFOP is the most popular method in the world, and the one most beginners graduate to. Its name is the four stages: Cross, F2L (First Two Layers), OLL (Orientation of the Last Layer), and PLL (Permutation of the Last Layer).</p>
+                <p><strong>Strengths:</strong> Huge amount of learning material, tutorials, and algorithm resources. Intuitive early steps and a smooth path from beginner methods. Very flexible, with many optional advanced algorithm sets.</p>
+                <p><strong>Weaknesses:</strong> Full OLL (57 algorithms) and PLL (21 algorithms) take real memorization. Solves often involve more cube rotations than Roux or ZZ.</p>
+                <p><strong>Best for:</strong> Cubers who want the safest, best-supported route and plenty of community help.</p>
+
+                <h2>Roux</h2>
+                <p>Roux, created by Gilles Roux, builds two 1x2x3 blocks on the left and right sides, then solves the last layer corners (CMLL) and finally the remaining edges and centers (LSE) using only M and U moves.</p>
+                <p><strong>Strengths:</strong> Very low move count, almost no cube rotations, and efficient use of the M-slice. Lookahead in the final stage is easy to develop. Fewer algorithms to learn (CMLL is around 42 cases).</p>
+                <p><strong>Weaknesses:</strong> The first blocks require strong intuition and are harder to learn well. LSE can feel unforgiving when you make an error. Fewer learning resources than CFOP.</p>
+                <p><strong>Best for:</strong> Cubers who enjoy intuitive, blockbuilding-style solving and smooth, flowing turns.</p>
+
+                <h2>ZZ</h2>
+                <p>ZZ, created by Zbigniew Zborowski, starts with EOLine, which orients every edge and places two edges on the bottom. Because every edge is oriented, the rest of the solve can be done using only R, L, U, and D moves with no F or B turns that would disturb edge orientation. Then comes ZZF2L (the first two layers) and the last layer.</p>
+                <p><strong>Strengths:</strong> Great ergonomics with very few rotations. Excellent move efficiency. The F2L stage is smooth once learned.</p>
+                <p><strong>Weaknesses:</strong> EOLine is hard to plan at first, and the last layer needs either many algorithms (ZBLL) or a two-step approach. Less community support than CFOP.</p>
+                <p><strong>Best for:</strong> Cubers who like planning ahead and want a method with clean, ergonomic turning.</p>
+
+                <h2>Quick Comparison</h2>
+                <div class="comparison-wrap">
+                    <table>
+                        <thead>
+                            <tr><th scope="col">Factor</th><th scope="col">CFOP</th><th scope="col">Roux</th><th scope="col">ZZ</th></tr>
+                        </thead>
+                        <tbody>
+                            <tr><th scope="row">Learning curve</th><td>Moderate</td><td>Steeper early on</td><td>Steep at the start</td></tr>
+                            <tr><th scope="row">Algorithms</th><td>Many (OLL + PLL)</td><td>Fewer (CMLL)</td><td>Moderate to many</td></tr>
+                            <tr><th scope="row">Rotations</th><td>More</td><td>Very few</td><td>Few</td></tr>
+                            <tr><th scope="row">Resources</th><td>Excellent</td><td>Good</td><td>Limited</td></tr>
+                            <tr><th scope="row">Style</th><td>Structured</td><td>Intuitive, fluid</td><td>Plan-then-execute</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <h2>How to Choose</h2>
+                <p>Try each method for a few weeks of casual solving. Notice which one feels natural, not just which one is popular.</p>
+                <ul>
+                    <li>If you want maximum resources and the lowest risk, start with CFOP.</li>
+                    <li>If you love intuition and flow, give Roux a serious try.</li>
+                    <li>If you enjoy planning a solve in advance, try ZZ.</li>
+                </ul>
+                <p>Once you commit, stick with it for several months before judging. Switching too soon resets your progress.</p>
+                <p class="pro-tip"><strong>Pro tip:</strong> No method is objectively the best. Top cubers have reached world-class times with all three, so your practice and consistency matter more than the method.</p>
+                <a class="back-link" href="blogs.html">Back to Cube Notes</a>
+            </div>
+        </article>
+    </main>
+
+    <footer>Keep turning. Keep learning. 🧩</footer>
+</body>
+</html>
